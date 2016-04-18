@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="templateTest">
+<head>
+	<title>Angular_temp_test</title>
+	<style>
+
+	li:first-child {
+	     font-style: italic;
+	}
+	 
+	 li:last-child {
+	     font-weight: bold;
+	 }
+		
+	</style>	
+</head>
+<body>
+
+<ul>
+    <li ng-repeat="num in [0,1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-hide="num % 3 == 0">
+        {{ num }} is not divisble by 3!
+    </li>
+</ul>
+
+<ul>
+	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter | uppercase}}</li>
+	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter | lowercase}}</li>
+</ul>
+
+
+
+<img ng-repeat="picture in ['/img/pasta.jpg','/img/italian-flag-small.jpg','/img/VolvoS40T5.jpg']" ng-src="{{ picture }}">
+
+
+
+
+
+
+
+<script src="/js/angular.min.js"></script>
+<script src="/js/templateTest.js"></script>
+</body>
+</html>
